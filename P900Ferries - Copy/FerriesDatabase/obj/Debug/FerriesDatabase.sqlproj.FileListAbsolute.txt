@@ -1,0 +1,12 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\FerriesDatabase\bin\Debug\FerriesDatabase.dacpac
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\FerriesDatabase\bin\Debug\FerriesDatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\FerriesDatabase\bin\Debug\FerriesDatabase.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\FerriesDatabase\obj\Debug\FerriesDatabase.sqlproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\FerriesDatabase\obj\Debug\FerriesDatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\FerriesDatabase\obj\Debug\FerriesDatabase.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\FerriesDatabase\bin\Debug\FerriesDatabase.dacpac
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\FerriesDatabase\bin\Debug\FerriesDatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\FerriesDatabase\bin\Debug\FerriesDatabase.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\FerriesDatabase\obj\Debug\FerriesDatabase.sqlproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\FerriesDatabase\obj\Debug\FerriesDatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\FerriesDatabase\obj\Debug\FerriesDatabase.pdb

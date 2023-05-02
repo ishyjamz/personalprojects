@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FerriesDatabase", "FerriesDatabase\FerriesDatabase.sqlproj", "{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerryWebApp", "FerryWebApp\FerryWebApp.csproj", "{C1151994-4ACA-4CA5-A18A-B7EB9F7AE20D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{41FD49F1-D3F3-435C-A4A6-0D6FBE9D0390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{F663FE46-B76F-4A78-9F42-8BAA435C498E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{93A7BB72-58BC-4BF1-8FF2-20EB0CDD2853}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessModels", "DataAccessModels\DataAccessModels.csproj", "{57B38198-FE69-4674-B9C2-0BF94B2D274F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8952EA7D-C2D5-481D-9D8F-8DDD5B568947}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C1151994-4ACA-4CA5-A18A-B7EB9F7AE20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1151994-4ACA-4CA5-A18A-B7EB9F7AE20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1151994-4ACA-4CA5-A18A-B7EB9F7AE20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1151994-4ACA-4CA5-A18A-B7EB9F7AE20D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FD49F1-D3F3-435C-A4A6-0D6FBE9D0390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FD49F1-D3F3-435C-A4A6-0D6FBE9D0390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FD49F1-D3F3-435C-A4A6-0D6FBE9D0390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FD49F1-D3F3-435C-A4A6-0D6FBE9D0390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F663FE46-B76F-4A78-9F42-8BAA435C498E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F663FE46-B76F-4A78-9F42-8BAA435C498E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F663FE46-B76F-4A78-9F42-8BAA435C498E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F663FE46-B76F-4A78-9F42-8BAA435C498E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93A7BB72-58BC-4BF1-8FF2-20EB0CDD2853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A7BB72-58BC-4BF1-8FF2-20EB0CDD2853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A7BB72-58BC-4BF1-8FF2-20EB0CDD2853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93A7BB72-58BC-4BF1-8FF2-20EB0CDD2853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B38198-FE69-4674-B9C2-0BF94B2D274F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B38198-FE69-4674-B9C2-0BF94B2D274F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B38198-FE69-4674-B9C2-0BF94B2D274F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B38198-FE69-4674-B9C2-0BF94B2D274F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0BA1363-D5C2-442D-AEF6-400C1ABFA62C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.dorsetsoftware.com:8080/tfs/dorset%20software%20training
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BusinessLayer\\BusinessLayer.csproj
+		SccProjectName1 = BusinessLayer
+		SccLocalPath1 = BusinessLayer
+		SccProjectUniqueName2 = DataAccess\\DataAccess.csproj
+		SccProjectName2 = DataAccess
+		SccLocalPath2 = DataAccess
+		SccProjectUniqueName3 = DataAccessModels\\DataAccessModels.csproj
+		SccProjectName3 = DataAccessModels
+		SccLocalPath3 = DataAccessModels
+		SccProjectUniqueName4 = FerriesDatabase\\FerriesDatabase.sqlproj
+		SccProjectName4 = FerriesDatabase
+		SccLocalPath4 = FerriesDatabase
+		SccProjectUniqueName5 = FerryWebApp\\FerryWebApp.csproj
+		SccProjectName5 = FerryWebApp
+		SccLocalPath5 = FerryWebApp
+		SccProjectUniqueName6 = Models\\Models.csproj
+		SccProjectName6 = Models
+		SccLocalPath6 = Models
+	EndGlobalSection
+EndGlobal

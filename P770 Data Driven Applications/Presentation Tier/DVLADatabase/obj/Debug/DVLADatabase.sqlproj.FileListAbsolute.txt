@@ -1,0 +1,10 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\bin\Debug\DVLADatabase.dacpac
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\bin\Debug\DVLADatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\bin\Debug\DVLADatabase.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\DVLADatabase.sqlproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\Model.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\refactor.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\postdeploy.sql
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\predeploy.sql
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\DVLADatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\obj\Debug\DVLADatabase.pdb

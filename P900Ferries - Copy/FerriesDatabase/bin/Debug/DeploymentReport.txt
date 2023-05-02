@@ -1,0 +1,38 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[AspNetRoles] (Table)
+       [dbo].[AspNetUserClaims] (Table)
+       [dbo].[AspNetUserLogins] (Table)
+       [dbo].[AspNetUserRoles] (Table)
+       [dbo].[AspNetUsers] (Table)
+       [dbo].[Booking] (Table)
+       [dbo].[BookingContact] (Table)
+       [dbo].[Company] (Table)
+       [dbo].[Ferry] (Table)
+       [dbo].[Location] (Table)
+       [dbo].[Schedule] (Table)
+       [dbo].[ScheduleStop] (Table)
+       [dbo].[FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_dbo.AspNetUserRoles_dbo.AspNetRoles_RoleId] (Foreign Key)
+       [dbo].[FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_Booking_AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_BookingContact_Booking] (Foreign Key)
+       [dbo].[FK_Ferry_Company] (Foreign Key)
+       [dbo].[FK_Schedule_Ferry] (Foreign Key)
+       [dbo].[FK_ScheduleStop_Schedule] (Foreign Key)
+       [dbo].[FK_ScheduleStop_Location] (Foreign Key)
+       [dbo].[CK_ScheduleStop_DepartureDay] (Check Constraint)
+       [dbo].[CK_ScheduleStop_ArrivalDay] (Check Constraint)
+
+** Supporting actions

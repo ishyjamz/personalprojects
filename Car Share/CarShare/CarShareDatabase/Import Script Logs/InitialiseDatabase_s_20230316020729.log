@@ -1,0 +1,12 @@
+16/03/2023 14:07:29	This log contains information about the import operation of the script 'InitialiseDatabase.sql' into project 'CarShareDatabase' on computer 'TRWKS115' by user'DeveloperTraining.
+16/03/2023 14:07:29	Started importing file: C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\InitialiseDatabase.sql 
+16/03/2023 14:07:29	File name C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\InitialiseDatabase.sql (size: 6835)
+16/03/2023 14:07:29	Parsing import script
+16/03/2023 14:07:29	Total number of batches in script: 18
+16/03/2023 14:07:29	Total number of statements in script: 18
+16/03/2023 14:07:29	The script was successfully imported into the project.
+16/03/2023 14:07:29	Analyzing schema objects...
+16/03/2023 14:07:29	Scanning project for duplicate elements
+16/03/2023 14:07:29	Finished duplicate element processing
+16/03/2023 14:07:30	A summary of the import was saved to the following location: C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\Import Script Logs\InitialiseDatabase_s_20230316020729.log
+16/03/2023 14:07:30	Click Finish to continue...

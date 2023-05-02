@@ -1,0 +1,10 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\bin\Debug\CarShareDatabase.dacpac
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\bin\Debug\CarShareDatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\bin\Debug\CarShareDatabase.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\CarShareDatabase.sqlproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\CarShareDatabase.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\CarShareDatabase.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\Model.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\refactor.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\postdeploy.sql
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\CarShareDatabase\obj\Debug\predeploy.sql

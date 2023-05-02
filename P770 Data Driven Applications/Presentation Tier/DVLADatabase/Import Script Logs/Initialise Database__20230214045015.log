@@ -1,0 +1,12 @@
+14/02/2023 16:50:15	This log contains information about the import operation of the script 'Initialise Database.sql' into project 'DVLADatabase' on computer 'TRWKS115' by user'DeveloperTraining.
+14/02/2023 16:50:15	Started importing file: C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Initialise Database.sql 
+14/02/2023 16:50:15	File name C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Initialise Database.sql (size: 5136)
+14/02/2023 16:50:15	Parsing import script
+14/02/2023 16:50:15	Total number of batches in script: 11
+14/02/2023 16:50:15	Total number of statements in script: 14
+14/02/2023 16:50:15	The script was successfully imported into the project.
+14/02/2023 16:50:15	Analyzing schema objects...
+14/02/2023 16:50:15	Scanning project for duplicate elements
+14/02/2023 16:50:15	Finished duplicate element processing
+14/02/2023 16:50:16	A summary of the import was saved to the following location: C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\DVLADatabase\Import Script Logs\Initialise Database__20230214045015.log
+14/02/2023 16:50:16	Click Finish to continue...

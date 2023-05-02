@@ -1,0 +1,111 @@
+﻿@model PresentationModels.Home.Home
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container w-50 mt-5" style="border: 5px solid; background-color: #201E20; border-color: #201E20; border-radius: 10px ">
+    <div class="row justify-content-center mt-5 mb-5">
+        <div class="col text-center">
+            <h1 class="h1" style="font-size: 48px; color: wheat; font-weight: bold">Ishy's Incredible Car Share</h1>
+            <small style="font-size: 26px; color: #E0A96D ">Making the World Greener and the Office Happier</small>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Driver Pending Requests</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr class="text-center">
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.DriverRequest.DriverRequests != null)
+                    {
+                        foreach (var item in Model.DriverRequest.DriverRequests)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    @item.Date.ToShortDateString()
+                                </td>
+                                <td>
+                                    @item.Passenger.Name
+                                </td>
+                                <td>
+                                    @item.Stop.Location.Name
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Approve", "ApproveRequest", "Home", new { passengerJourneyId = item.Journey.PassengerJourneyId, passengerId = item.Passenger.UserId }, new { @class = "btn", @style = "color: white; font-weight: bold; background-color: #1DB954" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Reject", "RejectRequest", "Home", new { passengerJourneyId = item.Journey.PassengerJourneyId }, new { @class = "btn", @style = "font-weight: bold; color: white; background-color:#FF0000" })
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Passenger Recent Updates</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr class="text-center">
+                        <th>
+                            Notifications
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Notification.NotificationGrid.Count != 0)
+                    {
+                        foreach (var item in Model.Notification.NotificationGrid)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    <p style="color: #201E20; font-weight: bold; font-size: 18px">Your journey request on @item.PassengerJourney.Date.ToShortDateString() has been @item.PassengerJourney.Status.Name by @item.PassengerJourney.Driver.Name</p>
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Dismiss", "DismissNotification", "Home", new { notificationId = item.NotificationId }, new { @class = "btn", @style = "font-weight: bold; color: white; background-color:#FF0000" })
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DVLAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Line1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Line2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Line3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="County" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Cameras" Relationship="Self.FK_Camera_Address" FromRole="Address" ToRole="Camera" />
+    <NavigationProperty Name="Owners" Relationship="Self.FK_Owner_Address" FromRole="Address" ToRole="Owner" />
+  </EntityType>
+  <EntityType Name="Camera">
+    <Key>
+      <PropertyRef Name="CameraId" />
+    </Key>
+    <Property Name="CameraId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoadName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RoadNumber" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="Decimal" Precision="8" Scale="5" Nullable="false" />
+    <Property Name="Latitude" Type="Decimal" Precision="8" Scale="5" Nullable="false" />
+    <Property Name="AddressId" Type="Int32" />
+    <NavigationProperty Name="Address" Relationship="Self.FK_Camera_Address" FromRole="Camera" ToRole="Address" />
+    <NavigationProperty Name="Sightings" Relationship="Self.FK_Sighting_Camera" FromRole="Camera" ToRole="Sighting" />
+    <NavigationProperty Name="SpeedCamera" Relationship="Self.FK_SpeedCamera_Camera" FromRole="Camera" ToRole="SpeedCamera" />
+    <NavigationProperty Name="TrafficLightCamera" Relationship="Self.FK_TrafficLightCamera_Camera" FromRole="Camera" ToRole="TrafficLightCamera" />
+  </EntityType>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ColourId" Type="Int32" Nullable="false" />
+    <Property Name="ModelId" Type="Int32" Nullable="false" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="OwnerId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Colour" Relationship="Self.FK_Car_Colour" FromRole="Car" ToRole="Colour" />
+    <NavigationProperty Name="Model" Relationship="Self.FK_Car_Model" FromRole="Car" ToRole="Model" />
+    <NavigationProperty Name="Owner" Relationship="Self.FK_Car_Owner" FromRole="Car" ToRole="Owner" />
+    <NavigationProperty Name="Sightings" Relationship="Self.FK_Sighting_Car" FromRole="Car" ToRole="Sighting" />
+  </EntityType>
+  <EntityType Name="Colour">
+    <Key>
+      <PropertyRef Name="ColourId" />
+    </Key>
+    <Property Name="ColourId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Colour" FromRole="Colour" ToRole="Car" />
+  </EntityType>
+  <EntityType Name="DrivingLicence">
+    <Key>
+      <PropertyRef Name="OwnerId" />
+    </Key>
+    <Property Name="OwnerId" Type="Int32" Nullable="false" />
+    <Property Name="DriverNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Owner" Relationship="Self.FK_DrivingLicence_Owner" FromRole="DrivingLicence" ToRole="Owner" />
+    <NavigationProperty Name="LicenceEntitlements" Relationship="Self.FK_LicenceEntitlement_DrivingLicence" FromRole="DrivingLicence" ToRole="LicenceEntitlement" />
+  </EntityType>
+  <EntityType Name="Fine">
+    <Key>
+      <PropertyRef Name="SightingId" />
+    </Key>
+    <Property Name="SightingId" Type="Int32" Nullable="false" />
+    <Property Name="DateIssued" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DatePaid" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Sighting" Relationship="Self.FK_Fine_Sighting" FromRole="Fine" ToRole="Sighting" />
+  </EntityType>
+  <EntityType Name="LicenceCategory">
+    <Key>
+      <PropertyRef Name="LicenceCategoryId" />
+    </Key>
+    <Property Name="LicenceCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="MinimumAge" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LicenceEntitlements" Relationship="Self.FK_LicenceEntitlement_LicenceCategory" FromRole="LicenceCategory" ToRole="LicenceEntitlement" />
+  </EntityType>
+  <EntityType Name="LicenceEntitlement">
+    <Key>
+      <PropertyRef Name="OwnerId" />
+      <PropertyRef Name="LicenceCategoryId" />
+    </Key>
+    <Property Name="OwnerId" Type="Int32" Nullable="false" />
+    <Property Name="LicenceCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="DrivingLicence" Relationship="Self.FK_LicenceEntitlement_DrivingLicence" FromRole="LicenceEntitlement" ToRole="DrivingLicence" />
+    <NavigationProperty Name="LicenceCategory" Relationship="Self.FK_LicenceEntitlement_LicenceCategory" FromRole="LicenceEntitlement" ToRole="LicenceCategory" />
+  </EntityType>
+  <EntityType Name="Make">
+    <Key>
+      <PropertyRef Name="MakeId" />
+    </Key>
+    <Property Name="MakeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Models" Relationship="Self.FK_Model_Make" FromRole="Make" ToRole="Model" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ModelId" />
+    </Key>
+    <Property Name="ModelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MakeId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Model" FromRole="Model" ToRole="Car" />
+    <NavigationProperty Name="Make" Relationship="Self.FK_Model_Make" FromRole="Model" ToRole="Make" />
+  </EntityType>
+  <EntityType Name="Owner">
+    <Key>
+      <PropertyRef Name="OwnerId" />
+    </Key>
+    <Property Name="OwnerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="AddressId" Type="Int32" Nullable="false" />
+    <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Address" Relationship="Self.FK_Owner_Address" FromRole="Owner" ToRole="Address" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Owner" FromRole="Owner" ToRole="Car" />
+    <NavigationProperty Name="DrivingLicence" Relationship="Self.FK_DrivingLicence_Owner" FromRole="Owner" ToRole="DrivingLicence" />
+  </EntityType>
+  <EntityType Name="Sighting">
+    <Key>
+      <PropertyRef Name="SightingId" />
+    </Key>
+    <Property Name="SightingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarId" Type="Int32" Nullable="false" />
+    <Property Name="CameraId" Type="Int32" Nullable="false" />
+    <Property Name="SightingTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="SecondsAfterRedLight" Type="Byte" />
+    <Property Name="SpeedMph" Type="Byte" />
+    <NavigationProperty Name="Camera" Relationship="Self.FK_Sighting_Camera" FromRole="Sighting" ToRole="Camera" />
+    <NavigationProperty Name="Car" Relationship="Self.FK_Sighting_Car" FromRole="Sighting" ToRole="Car" />
+    <NavigationProperty Name="Fine" Relationship="Self.FK_Fine_Sighting" FromRole="Sighting" ToRole="Fine" />
+  </EntityType>
+  <EntityType Name="SpeedCamera">
+    <Key>
+      <PropertyRef Name="CameraId" />
+    </Key>
+    <Property Name="CameraId" Type="Int32" Nullable="false" />
+    <Property Name="SpeedMphLimit" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Camera" Relationship="Self.FK_SpeedCamera_Camera" FromRole="SpeedCamera" ToRole="Camera" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TrafficLightCamera">
+    <Key>
+      <PropertyRef Name="CameraId" />
+    </Key>
+    <Property Name="CameraId" Type="Int32" Nullable="false" />
+    <Property Name="SecondsAfterRedLightThreshold" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Camera" Relationship="Self.FK_TrafficLightCamera_Camera" FromRole="TrafficLightCamera" ToRole="Camera" />
+  </EntityType>
+  <Association Name="FK_Camera_Address">
+    <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+    <End Role="Camera" Type="Self.Camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="Camera">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Owner_Address">
+    <End Role="Address" Type="Self.Address" Multiplicity="1" />
+    <End Role="Owner" Type="Self.Owner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="Owner">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sighting_Camera">
+    <End Role="Camera" Type="Self.Camera" Multiplicity="1" />
+    <End Role="Sighting" Type="Self.Sighting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Camera">
+        <PropertyRef Name="CameraId" />
+      </Principal>
+      <Dependent Role="Sighting">
+        <PropertyRef Name="CameraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SpeedCamera_Camera">
+    <End Role="Camera" Type="Self.Camera" Multiplicity="1" />
+    <End Role="SpeedCamera" Type="Self.SpeedCamera" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Camera">
+        <PropertyRef Name="CameraId" />
+      </Principal>
+      <Dependent Role="SpeedCamera">
+        <PropertyRef Name="CameraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrafficLightCamera_Camera">
+    <End Role="Camera" Type="Self.Camera" Multiplicity="1" />
+    <End Role="TrafficLightCamera" Type="Self.TrafficLightCamera" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Camera">
+        <PropertyRef Name="CameraId" />
+      </Principal>
+      <Dependent Role="TrafficLightCamera">
+        <PropertyRef Name="CameraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_Colour">
+    <End Role="Colour" Type="Self.Colour" Multiplicity="1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colour">
+        <PropertyRef Name="ColourId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ColourId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_Model">
+    <End Role="Model" Type="Self.Model" Multiplicity="1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ModelId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_Owner">
+    <End Role="Owner" Type="Self.Owner" Multiplicity="1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owner">
+        <PropertyRef Name="OwnerId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sighting_Car">
+    <End Role="Car" Type="Self.Car" Multiplicity="1" />
+    <End Role="Sighting" Type="Self.Sighting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car">
+        <PropertyRef Name="CarId" />
+      </Principal>
+      <Dependent Role="Sighting">
+        <PropertyRef Name="CarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DrivingLicence_Owner">
+    <End Role="Owner" Type="Self.Owner" Multiplicity="1" />
+    <End Role="DrivingLicence" Type="Self.DrivingLicence" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Owner">
+        <PropertyRef Name="OwnerId" />
+      </Principal>
+      <Dependent Role="DrivingLicence">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LicenceEntitlement_DrivingLicence">
+    <End Role="DrivingLicence" Type="Self.DrivingLicence" Multiplicity="1" />
+    <End Role="LicenceEntitlement" Type="Self.LicenceEntitlement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DrivingLicence">
+        <PropertyRef Name="OwnerId" />
+      </Principal>
+      <Dependent Role="LicenceEntitlement">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fine_Sighting">
+    <End Role="Sighting" Type="Self.Sighting" Multiplicity="1" />
+    <End Role="Fine" Type="Self.Fine" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Sighting">
+        <PropertyRef Name="SightingId" />
+      </Principal>
+      <Dependent Role="Fine">
+        <PropertyRef Name="SightingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LicenceEntitlement_LicenceCategory">
+    <End Role="LicenceCategory" Type="Self.LicenceCategory" Multiplicity="1" />
+    <End Role="LicenceEntitlement" Type="Self.LicenceEntitlement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LicenceCategory">
+        <PropertyRef Name="LicenceCategoryId" />
+      </Principal>
+      <Dependent Role="LicenceEntitlement">
+        <PropertyRef Name="LicenceCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Model_Make">
+    <End Role="Make" Type="Self.Make" Multiplicity="0..1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Make">
+        <PropertyRef Name="MakeId" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="MakeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DVLAEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="Self.Address" />
+    <EntitySet Name="Cameras" EntityType="Self.Camera" />
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="Colours" EntityType="Self.Colour" />
+    <EntitySet Name="DrivingLicences" EntityType="Self.DrivingLicence" />
+    <EntitySet Name="Fines" EntityType="Self.Fine" />
+    <EntitySet Name="LicenceCategories" EntityType="Self.LicenceCategory" />
+    <EntitySet Name="LicenceEntitlements" EntityType="Self.LicenceEntitlement" />
+    <EntitySet Name="Makes" EntityType="Self.Make" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="Owners" EntityType="Self.Owner" />
+    <EntitySet Name="Sightings" EntityType="Self.Sighting" />
+    <EntitySet Name="SpeedCameras" EntityType="Self.SpeedCamera" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TrafficLightCameras" EntityType="Self.TrafficLightCamera" />
+    <AssociationSet Name="FK_Camera_Address" Association="Self.FK_Camera_Address">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Camera" EntitySet="Cameras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Owner_Address" Association="Self.FK_Owner_Address">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Owner" EntitySet="Owners" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sighting_Camera" Association="Self.FK_Sighting_Camera">
+      <End Role="Camera" EntitySet="Cameras" />
+      <End Role="Sighting" EntitySet="Sightings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SpeedCamera_Camera" Association="Self.FK_SpeedCamera_Camera">
+      <End Role="Camera" EntitySet="Cameras" />
+      <End Role="SpeedCamera" EntitySet="SpeedCameras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrafficLightCamera_Camera" Association="Self.FK_TrafficLightCamera_Camera">
+      <End Role="Camera" EntitySet="Cameras" />
+      <End Role="TrafficLightCamera" EntitySet="TrafficLightCameras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_Colour" Association="Self.FK_Car_Colour">
+      <End Role="Colour" EntitySet="Colours" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_Model" Association="Self.FK_Car_Model">
+      <End Role="Model" EntitySet="Models" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_Owner" Association="Self.FK_Car_Owner">
+      <End Role="Owner" EntitySet="Owners" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sighting_Car" Association="Self.FK_Sighting_Car">
+      <End Role="Car" EntitySet="Cars" />
+      <End Role="Sighting" EntitySet="Sightings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DrivingLicence_Owner" Association="Self.FK_DrivingLicence_Owner">
+      <End Role="Owner" EntitySet="Owners" />
+      <End Role="DrivingLicence" EntitySet="DrivingLicences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LicenceEntitlement_DrivingLicence" Association="Self.FK_LicenceEntitlement_DrivingLicence">
+      <End Role="DrivingLicence" EntitySet="DrivingLicences" />
+      <End Role="LicenceEntitlement" EntitySet="LicenceEntitlements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fine_Sighting" Association="Self.FK_Fine_Sighting">
+      <End Role="Sighting" EntitySet="Sightings" />
+      <End Role="Fine" EntitySet="Fines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LicenceEntitlement_LicenceCategory" Association="Self.FK_LicenceEntitlement_LicenceCategory">
+      <End Role="LicenceCategory" EntitySet="LicenceCategories" />
+      <End Role="LicenceEntitlement" EntitySet="LicenceEntitlements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Model_Make" Association="Self.FK_Model_Make">
+      <End Role="Make" EntitySet="Makes" />
+      <End Role="Model" EntitySet="Models" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

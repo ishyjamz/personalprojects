@@ -1,0 +1,37 @@
+﻿
+@model  Models.Models.CompanyModels.CompanyViewModel
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+
+<div class="row justify-content-center mb-5">
+    <div class="col text-center">
+        <h1 style="font-size: 48px">Add a Company</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    @using (Html.BeginForm("AddCompany", "Company"))
+    {
+        <div class="row justify-content-center mb-5">
+            <div class="col-3">
+                <div class="form-floating" style="width: 600px">
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company Name" } })
+                    @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "form-label" })
+                </div>
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center">
+            <div class="col-2 text-end">
+                <input type="submit" value="Add" class="btn btn-primary" style="width: 100px" />
+            </div>
+            <div class="col-2 text-start">
+                 @Html.ActionLink("Cancel", "Cancel", "Company", new { @class = "btn btn-danger", @style = "width: 100px" })
+            </div>
+        </div>
+    }
+</div>
+

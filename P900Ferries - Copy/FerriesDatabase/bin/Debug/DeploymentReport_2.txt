@@ -1,0 +1,37 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[CK_ScheduleStop_ArrivalDay] (Check Constraint)
+       [dbo].[CK_ScheduleStop_DepartureDay] (Check Constraint)
+     Create
+       [dbo].[CK_ScheduleStop_ArrivalDay] (Check Constraint)
+       [dbo].[CK_ScheduleStop_DepartureDay] (Check Constraint)
+       [dbo].[dummy] (Procedure)
+     Alter
+       [dbo].[usp_Company_Delete] (Procedure)
+       [dbo].[usp_Company_Get] (Procedure)
+       [dbo].[usp_Company_Insert] (Procedure)
+       [dbo].[usp_Company_List] (Procedure)
+       [dbo].[usp_Company_ListFerry] (Procedure)
+       [dbo].[usp_Company_Update] (Procedure)
+       [dbo].[usp_Ferry_Delete] (Procedure)
+       [dbo].[usp_Ferry_Get] (Procedure)
+       [dbo].[usp_Ferry_Insert] (Procedure)
+       [dbo].[usp_Ferry_List] (Procedure)
+       [dbo].[usp_Ferry_ListSchedules] (Procedure)
+       [dbo].[usp_Ferry_Update] (Procedure)
+       [dbo].[usp_Schedule_Delete] (Procedure)
+       [dbo].[usp_Schedule_Get] (Procedure)
+       [dbo].[usp_Schedule_Insert] (Procedure)
+       [dbo].[usp_Schedule_Update] (Procedure)
+
+** Supporting actions

@@ -1,0 +1,12 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\DataAccessModels\bin\Debug\DataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\DataAccessModels\bin\Debug\DataAccessModels.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\DataAccessModels\obj\Debug\DataAccessModels.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\DataAccessModels\obj\Debug\DataAccessModels.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\DataAccessModels\obj\Debug\DataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\DataAccessModels\obj\Debug\DataAccessModels.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\DataAccessModels\bin\Debug\DataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\DataAccessModels\bin\Debug\DataAccessModels.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\DataAccessModels\obj\Debug\DataAccessModels.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\DataAccessModels\obj\Debug\DataAccessModels.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\DataAccessModels\obj\Debug\DataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\DataAccessModels\obj\Debug\DataAccessModels.pdb

@@ -1,0 +1,93 @@
+﻿@model Models.Models.CompanyModels.CompanyViewModel
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<div class="container" style="margin-bottom: 100px">
+    <div class="row justify-content-center mb-5" style="margin-top: 10px">
+        <div class="col-4 text-center">
+            <h1>View Companies</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-8">
+            @using (Html.BeginForm("PopulateGrid", "Company"))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row row-cols-2 justify-content-center mb-4">
+                    <div class="col-3">
+                        @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "form-label" })
+                    </div>
+                    <div class="col-5">
+                        @Html.EditorFor(c => c.Name, new { htmlAttributes = new { @class = "form-control ", @id = "txtName" } })
+                        @Html.HiddenFor(c => c.CompanyId)
+                    </div>
+                </div>
+                <div class="row row-cols-2 justify-content-center mb-5">
+                    <div class="col-2">
+                        <input type="submit" value="Search" class="btn btn-success" style="width: 100px" />
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-danger" style="width: 100px" onclick="Clear()">Clear</button>
+                    </div>
+                </div>
+            }
+            <div class="container">
+
+                <div class="row justify-content-end">
+                    <div class="col-3 text-end">
+                        <a href="@Url.Action("Create", "Company")" class="btn btn-success">Add Company</a>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <table class="table" id="companyTable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Name
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+
+                                    @if (Model.CompanyGrid != null)
+                                    {
+                                        foreach (var item in Model.CompanyGrid)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @item.Name
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("View Details", "Delete", "Company", new { id = item.CompanyId }, new { @class = "btn btn-secondary" })
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "Edit", "Company", new { id = item.CompanyId }, new { @class = "btn btn-primary" })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function Clear() {
+        const txtName = document.getElementById("txtName")
+        txtName.value = "";
+        const txtCompany = document.getElementById("txtCompany");
+        txtCompany.value = "";
+        var tbody = document.getElementById("tableBody")
+        tbody.remove();
+    }
+</script>

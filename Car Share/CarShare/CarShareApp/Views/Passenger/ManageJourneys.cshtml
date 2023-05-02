@@ -1,0 +1,114 @@
+﻿@model PresentationModels.Passenger.ManagePassengerJourney
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col text-center">
+            <h1 class="h1" style="font-size: 48px; color: #201E20; font-weight: bold">Passenger: Manage Journeys</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Upcoming Journeys</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr class="text-center">
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Pick Up Time
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            Driver
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.JourneyGrid != null)
+                    {
+                        foreach (var item in Model.JourneyGrid)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    @item.Date.ToShortDateString()
+                                </td>
+                                <td>
+                                    @item.PickUpTime
+                                </td>
+                                <td>
+                                    @item.Location.Name
+                                </td>
+                                <td>
+                                    @item.Driver.Name
+                                </td>
+                                <td>
+                                    @item.Status.Name
+                                </td>
+                                <td>
+                                    @if (item.Status.StatusId == 3)
+                                    {
+                                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modal" style="font-weight: bold; color: white; background-color:#FF0000">Cancel</a>
+                                        <div class="modal fade" id="modal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header" style="background-color: #201E20">
+                                                        <h2 class="text-danger" style="font-weight: bold">Warning</h2>
+                                                    </div>
+                                                    <div class="modal-body" style="background-color: #201E20">
+                                                        <p style="color:wheat; font-weight:bold">Are you sure you want to cancel your journey?</p>
+                                                    </div>
+                                                    <div class="modal-footer" style="background-color: #201E20">
+                                                        <div class="row row-cols-2 justify-content-center">
+                                                            <div class="col text-center">
+                                                                <a href="@Url.Action("CancelPassengerJourney", "Passenger", new {passengerJourneyId = item.PassengerJourneyId} )" class="btn" style="background-color: #1DB954; color:white; font-weight:bold">Cancel</a>
+                                                            </div>
+                                                            <div class="col text-center">
+                                                                <a class="btn" style="background-color: #E0A96D; color: #201E20; font-weight: bold" data-bs-dismiss="modal">Close</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    else if (item.Status.StatusId == 2)
+                                    {
+                                        @Html.ActionLink("Remove", "CancelPassengerJourney", "Passenger", new { passengerJourneyId = item.PassengerJourneyId }, new { @class = "btn", @style = "font-weight: bold; color: white; background-color:#FF0000" })
+
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink("Cancel", "CancelPassengerJourney", "Passenger", new { passengerJourneyId = item.PassengerJourneyId }, new { @class = "btn disabled" })
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-3 mb-5 justify-content-center">
+        <div class="col text-center">
+            @Html.ActionLink("Book a Journey", "BookJourney", "Passenger", new { @class = "btn", @style = "font-weight: bold; color:wheat ; background-color:#201E20" })
+        </div>
+    </div>
+</div>

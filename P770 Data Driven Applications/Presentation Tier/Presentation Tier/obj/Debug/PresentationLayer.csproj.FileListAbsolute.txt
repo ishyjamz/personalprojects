@@ -1,0 +1,28 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Presentation Tier.exe.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Presentation Tier.exe
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Presentation Tier.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\BusinessLayer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Entity Library.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\EntityFramework.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Model Library.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\BusinessLayer.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\BusinessLayer.dll.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Entity Library.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Entity Library.dll.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Model Library.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\Model Library.dll.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\EntityFramework.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.csproj.SuggestedBindingRedirects.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.CarDetails.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.Cars.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.Owner.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\Presentation_Tier.Properties.Resources.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.SearchOwner.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\PresentationLayer.csproj.CopyComplete
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\Presentation Tier.exe
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Presentation Tier\obj\Debug\Presentation Tier.pdb

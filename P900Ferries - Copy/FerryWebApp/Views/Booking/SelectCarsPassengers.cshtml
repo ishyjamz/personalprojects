@@ -1,0 +1,78 @@
+﻿@model Models.Models.BookingModels.CarsPassengers
+@{
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+@using (Html.BeginForm("StoreCarsPassengers", "Booking"))
+{
+    <div class="container">
+        <div class="row justify-content-center mb-3 mt-3">
+            <div class="col text-center">
+                <h1 style="font-size: 48px">Select Number of Cars/Passengers</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="border:5px solid; border-color: cornflowerblue; border-radius:10px">
+        <div class="row justify-content-center mt-3 mb-4">
+            <div class="col text-center">
+                <h4>Cars/Passengers</h4>
+            </div>
+        </div>
+        <div class="row row-cols-4 justify-content-center mb-5">
+            <div class="col-2 text-center">
+                @Html.LabelFor(m => m.NumberOfCars, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4 text-center">
+                @Html.EditorFor(c => c.NumberOfCars, new { htmlAttributes = new { @class = "form-control ", @type = "number", @id = "carNumber", @onchange = "NumberChange()" } })
+                @Html.ValidationMessageFor(model => model.NumberOfCars, string.Empty, new { @class = "text-danger" })
+
+            </div>
+            <div class="col-2 text-center">
+                @Html.LabelFor(m => m.NumberOfPassengers, htmlAttributes: new { @class = "form-label"})
+            </div>
+            <div class="col-4 text-center">
+                @Html.EditorFor(c => c.NumberOfPassengers, new { htmlAttributes = new { @class = "form-control", @type = "number", @id = "passengerNumber", @onchange = "NumberChange()" } })
+                @Html.ValidationMessageFor(model => model.NumberOfPassengers, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3 mb-4">
+            <div class="col text-center">
+                <h4>Total Cost</h4>
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center mb-5">
+            <div class="col-2">
+                @Html.LabelFor(j => j.TotalCost, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        £
+                    </div>
+                    @Html.TextBoxFor(c => c.TotalCost, new { @class = "form-control", @type = "number", @id = "totalCost", @step = "0.50", @disabled = "true" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center mb-3">
+            <div class="col text-end">
+                @Html.ActionLink("Back", "ListJourneys", "Booking", new { @class = "btn btn-secondary" })
+                @Html.HiddenFor(m => m.CostPerPerson, new {@id = "costPerson"})
+                @Html.HiddenFor(m => m.CostPerVehicle, new {@id = "costVehicle"})
+            </div>
+            <div class="col text-start">
+                <input type="submit" class="btn btn-success" value="Next" />
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    function NumberChange() {
+        let car = document.getElementById("carNumber");
+        let pass = document.getElementById("passengerNumber");
+        let totalCost = document.getElementById("totalCost");
+        let costPerson = document.getElementById("costPerson");
+        let costVehicle = document.getElementById("costVehicle");
+        totalCost.value = car.value * costVehicle.value + pass.value * costPerson.value;
+    }
+</script>

@@ -1,0 +1,4 @@
+<StyleCopViolations>
+  <Violation Section="Root" LineNumber="1" Source="C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Taskset 1 Example\Models\DatabaseDrivenApplications.Designer.cs" RuleNamespace="StyleCop.CSharp.DocumentationRules" Rule="FileHeaderMustShowCopyright" RuleId="SA1634">The file header must contain a copyright tag.</Violation>
+  <Violation Section="Root" LineNumber="1" Source="C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Taskset 1 Example\Models\Properties\AssemblyInfo.cs" RuleNamespace="StyleCop.CSharp.DocumentationRules" Rule="FileMustHaveHeader" RuleId="SA1633">The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</Violation>
+</StyleCopViolations>

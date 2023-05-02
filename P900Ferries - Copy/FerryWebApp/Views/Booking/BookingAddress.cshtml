@@ -1,0 +1,80 @@
+﻿@model Models.Models.BookingModels.ContactDetails
+@{
+    ViewBag.Title = "BookingAddress";
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+@using (Html.BeginForm("StoreContactDetails", "Booking"))
+{
+    <div class="container">
+        <div class="row justify-content-center mt-3">
+            <div class="=col text-center">
+                <h1 style="font-size: 48px">Contact Details</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="border:5px solid; border-color: cornflowerblue; border-radius:10px">
+        <div class="row justify-content-center mt-3 mb-3">
+            <div class="col text-center">
+                <h4>Person</h4>
+            </div>
+        </div>
+        <div class="row row-cols-4 justify-content-center mb-5">
+            <div class="col-2">
+                @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4">
+                @Html.EditorFor(c => c.Name, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Name, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col text-center">
+                <h4>Address</h4>
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center mb-3">
+            <div class="col-2 text-end">
+                @Html.LabelFor(j => j.Line1, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4">
+                @Html.EditorFor(c => c.Line1, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Line1, string.Empty, new { @class = "text-danger" })
+
+            </div>
+            <div class="col-2 text-end">
+                @Html.LabelFor(j => j.Line2, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4">
+                @Html.EditorFor(c => c.Line2, new { htmlAttributes = new { @class = "form-control " } })
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center mb-5">
+            <div class="col-2 text-end">
+                @Html.LabelFor(j => j.City, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4">
+                @Html.EditorFor(c => c.City, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.City, string.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-2 text-end">
+                @Html.LabelFor(j => j.Postcode, htmlAttributes: new { @class = "form-label" })
+            </div>
+            <div class="col-4">
+                @Html.EditorFor(c => c.Postcode, new { htmlAttributes = new { @class = "form-control " } })
+                @Html.ValidationMessageFor(model => model.Postcode, string.Empty, new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="row row-cols-2 justify-content-center mb-3">
+            <div class="col text-end">
+                @Html.ActionLink("Back", "ListJourneys", "Booking", new { @class = "btn btn-secondary" })
+            </div>
+            <div class="col text-start">
+                <input type="submit" class="btn btn-success" value="Book" />
+            </div>
+        </div>
+    </div>
+
+}

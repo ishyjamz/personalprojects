@@ -1,0 +1,111 @@
+﻿@model Models.Models.FerryModels.FerryViewModel
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<div class="container" style="margin-bottom: 100px">
+    <div class="row justify-content-center mb-5" style="margin-top: 10px">
+        <div class="col-4 text-center">
+            <h1>View Ferries</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-8">
+            @using (Html.BeginForm("PopulateGrid", "Ferry"))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row row-cols-2 justify-content-center mb-4">
+                    <div class="col-3">
+                        @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "form-label" })
+                    </div>
+                    <div class="col-5">
+                        @Html.EditorFor(c => c.Name, new { htmlAttributes = new { @class = "form-control ", @id = "txtName" } })
+                    </div>
+                </div>
+                <div class="row row-cols-2 justify-content-center mb-4">
+                    <div class="col-3">
+                        @Html.LabelFor(m => m.Company.Name, htmlAttributes: new { @class = "form-label" })
+                    </div>
+                    <div class="col-5">
+                        @Html.EditorFor(c => c.Company.Name, new { htmlAttributes = new { @class = "form-control", @id = "txtCompany" } })
+                    </div>
+                </div>
+                <div class="row row-cols-2 justify-content-center mb-5">
+                    <div class="col-2">
+                        <input type="submit" value="Search" class="btn btn-primary" style="width: 100px" />
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" style="width: 100px" onclick="Clear()">Clear</button>
+                    </div>
+                </div>
+            }
+            <div class="container">
+
+                <div class="row justify-content-end">
+                    <div class="col-3 text-end">
+                        <a href="@Url.Action("OpenAddPage", "Ferry")" class="btn btn-primary">Add Ferry</a>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <table class="table" id="ferryTable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Company
+                                        </th>
+                                        <th>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+
+                                    @if (Model.FerryGrid != null)
+                                    {
+                                        foreach (var item in Model.FerryGrid)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @item.FerryName
+                                                </td>
+                                                <td>
+                                                    @item.CompanyName
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("View Details", "Delete", "Ferry", new { id = item.FerryId }, new { @class = "btn btn-primary" })
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Edit", "Edit", "Ferry", new { id = item.FerryId }, new { @class = "btn btn-primary" })
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function Clear() {
+        const txtName = document.getElementById("txtName")
+        txtName.value = "";
+        const txtCompany = document.getElementById("txtCompany");
+        txtCompany.value = "";
+        var tbody = document.getElementById("tableBody")
+        tbody.remove();
+        //const old_tbody = document.getElementById("tableBody");
+        //const new_tbody = document.createElement("tbody");
+        //old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
+    }
+</script>

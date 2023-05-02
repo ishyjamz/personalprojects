@@ -1,0 +1,148 @@
+﻿@model PresentationModels.Passenger.BookJourney
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("FindJourneys", "Passenger", FormMethod.Post))
+{
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-5">
+            <div class="col text-center">
+                <h1 class="h1" style="font-size: 48px; color: #201E20; font-weight: bold ">Passenger: Book a Journey</h1>
+            </div>
+        </div>
+        @{
+            if (ViewBag.Message != null)
+            {
+                <div class="row justify-content-center mt-5">
+                    <div class="alert alert-danger text-center" style="width: 500px">
+                        @ViewBag.Message
+                    </div>
+                </div>
+            }
+        }
+
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <div class="row justify-content-center mt-5">
+                <div class="alert alert-success text-center" style="width: 500px">
+                    @ViewBag.SuccessMessage
+                </div>
+            </div>
+        }
+
+        @if (ViewBag.FailureMessage != null)
+        {
+            <div class="row justify-content-center mt-5">
+                <div class="alert alert-danger text-center" style="width: 500px">
+                    @ViewBag.FailureMessage
+                </div>
+            </div>
+        }
+    </div>
+    <div class="container w-50 mt-5" style="border: 5px solid; border-color: #201E20; border-radius: 10px ">
+        <div class="row row-cols-2 justify-content-center mt-3">
+            <div class="col-2">
+                @Html.LabelFor(m => m.Date, htmlAttributes: new { @class = "form-label", @style = "color:#201E20; font-size: 16px" })
+            </div>
+            <div class="col-4">
+                @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control", @type = "date", @style = "border-color: #201E20" } })
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(m => m.Date)
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center mt-3">
+            <div class="col-2">
+                @Html.LabelFor(m => m.Location, htmlAttributes: new { @class = "form-label", @style = "color:#201E20; font-size: 16px" })
+            </div>
+            <div class="col-4">
+                @Html.DropDownListFor(s => s.Location.LocationId,
+                new SelectList(Model.LocationList, "LocationId", "Name"),
+                "[Please Select]", new { @class = "form-select", @style = "border-color: #201E20" })
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(m => m.Location)
+                </div>
+            </div>
+        </div>
+        <div class="row row justify-content-center mt-3">
+            <div class="col-2 text-start">
+                <p style="color:#201E20; font-size: 16px">To Work</p>
+            </div>
+            <div class="col-1">
+                @Html.RadioButtonFor(m => m.FromToWork, "True")
+            </div>
+            <div class="col-2 text-start">
+                <p style="color:#201E20; font-size: 16px">From Work</p>
+            </div>
+            <div class="col-1">
+                @Html.RadioButtonFor(m => m.FromToWork, "False")
+            </div>
+        </div>
+        <div class="row row justify-content-center mt-3">
+            <div class="col text-center">
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(m => m.FromToWork)
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col text-center">
+                <input type="submit" class="btn" style="font-weight: bold; color: wheat; background-color: #201E20 " value="Find Journeys" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container w-50 mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Available Journeys</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr class="text-center">
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Pick Up Time
+                        </th>
+                        <th>
+                            Arrival Time
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.AvailableJourneysGrid != null)
+                    {
+                        foreach (var item in Model.AvailableJourneysGrid)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    @item.DriverJourney.Driver.Name
+                                </td>
+                                <td>
+                                    @item.PickUpTime
+                                </td>
+                                <td>
+                                    @item.ArrivalTime
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Book", "CreatePassengerJourney", "Passenger", new { journeyId = item.DriverJourney.DriverJourneyId, locationId = Model.Location.LocationId }, new { @class = "btn", @style = "font-weight: bold; color: #201E20; background-color:#1DB954" })
+                                </td>
+                            </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿@model Models.Models.ScheduleModels.ScheduleStop
+@using (Html.BeginForm("AddStop", "Schedule"))
+{
+    <div class="modal" id="stopModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-primary text-bold">Add a New Stop</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cols-2 justify-content-center mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.DepartureDay)
+                        </div>
+                        <div class="col">
+                            @Html.DropDownListFor(s => s.DepartureDay.DayId,
+                           new SelectList(Model.DepartureDayList, "DayId", "DayName"),
+                           "[Please Select]", new { @class = "form-select" })
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 justify-content-center mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.DepartureTime)
+                            @Html.HiddenFor(m => m.ScheduleId)
+
+                        </div>
+                        <div class="col ">
+                            @Html.EditorFor(s => s.DepartureTime, new { htmlAttributes = new { @class = "form-control ", @type = "time" } })
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 justify-content-center mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.ArrivalDay)
+                        </div>
+                        <div class="col">
+                            @Html.DropDownListFor(s => s.ArrivalDay.DayId,
+                           new SelectList(Model.ArrivalDayList, "DayId", "DayName"),
+                           "[Please Select]", new { @class = "form-select" })
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 justify-content-center mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.ArrivalTime)
+                        </div>
+                        <div class="col">
+                            @Html.EditorFor(s => s.ArrivalTime, new { htmlAttributes = new { @class = "form-control ", @type = "time" } })
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 justify-content-center mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.Location)
+                        </div>
+                        <div class="col">
+                            @Html.DropDownListFor(s => s.Location.LocationId,
+                            new SelectList(Model.LocationList, "LocationId", "Name"),
+                            "[Please Select]", new { @class = "form-select" })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row row-cols-2 justify-content-center">
+                        <div class="col">
+                            <input type="submit" class="btn btn-success" value="Confirm" data-bs-dismiss="modal" />
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger" data-bs-dismiss="modal">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

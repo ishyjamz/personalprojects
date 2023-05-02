@@ -1,0 +1,94 @@
+﻿@model PresentationModels.Driver.Stops
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container w-50">
+    <div class="row justify-content-center mt-5">
+        <div class="col text-center">
+            <h1 class="h1" style="font-size: 48px; color: #201E20; font-weight: bold ">Driver: Stops</h1>
+        </div>
+    </div>
+    @if (ViewBag.Message == "Cannot insert two stops with same location")
+    {
+        <div class="row justify-content-center mt-3">
+            <div class="col text-center">
+                <div class="alert alert-danger">@ViewBag.Message</div>
+            </div>
+        </div>
+    }
+    else if (ViewBag.Message == "Stop added successfully")
+    {
+        <div class="row justify-content-center mt-3">
+            <div class="col text-center">
+                <div class="alert alert-success">@ViewBag.Message</div>
+            </div>
+        </div>
+    }
+
+    <div class="row justify-content-center">
+        <div class="col text-center text-danger">
+            @Html.ValidationMessageFor(m => m.StopLocation)
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center text-bg-danger">
+            @Html.ValidationMessageFor(m => m.TimeFromHome)
+        </div>
+    </div>
+
+</div>
+<div class="container w-50 mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Stops List</h2>
+        </div>
+    </div>
+    <div class="row mt-3 justify-content-center">
+        <div class="col text-center">
+            <table class="table">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            Time From Home (mins)
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.StopsGrid.Count != 0)
+                    {
+                        foreach (var item in Model.StopsGrid)
+                        {
+                            <tr>
+                                <td>
+                                    @item.StopLocation.Name
+                                </td>
+                                <td>
+                                    @item.TimeFromHome
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Remove", "DeleteStop", "Driver", new { id = item.StopLocation.LocationId }, new { @class = "btn", @style = "font-weight: bold; color: white; background-color:#FF0000" })
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-3 justify-content-center">
+        <div class="col text-center">
+            <a class="btn" data-bs-toggle="modal" data-bs-target="#StopModal" style="font-weight: bold; color: wheat; background-color: #201E20">Add Stop</a>
+            @{
+                Html.RenderPartial("AddStop", Model);
+            }
+        </div>
+    </div>
+</div>
+

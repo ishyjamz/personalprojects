@@ -1,0 +1,47 @@
+﻿@model PresentationModels.Driver.Stops
+@using (Html.BeginForm("CreateStop", "Driver"))
+{
+    <div class="modal" id="StopModal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #201E20">
+                    <h2 style="color:wheat">Add a New Stop</h2>
+                </div>
+                <div class="modal-body" style="background-color: #201E20">
+                    <div class="row row-cols-2 justify-content-start mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.StopLocation, new {@style = "color:wheat" })
+                        </div>
+                        <div class="col">
+                            @Html.DropDownListFor(s => s.StopLocation.LocationId,
+                           new SelectList(Model.LocationList, "LocationId", "Name"),
+                           "[Please Select]", new { @class = "form-select" })
+                        </div>
+                        <div class="text-danger">
+                            @Html.ValidationMessageFor(m => m.StopLocation.LocationId)
+                        </div>
+                    </div>
+                    <div class="row row-cols-2 justify-content-center mb-3">
+                        <div class="col">
+                            @Html.LabelFor(s => s.TimeFromHome, new { @style = "color:wheat" })
+                        </div>
+                        <div class="col ">
+                            @Html.EditorFor(s => s.TimeFromHome, new { htmlAttributes = new { @class = "form-control ", @type = "number" } })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="background-color: #201E20">
+                    <div class="row row-cols-2 justify-content-center">
+                        <div class="col">
+                            <input type="submit" class="btn" style="font-weight: bold; background-color: #1DB954; color:white" value="Confirm" data-bs-dismiss="modal" />
+                        </div>
+                        <div class="col">
+                            <a class="btn" style="font-weight: bold; color: white; background-color:#FF0000" data-bs-dismiss="modal">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

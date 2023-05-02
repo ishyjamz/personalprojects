@@ -1,0 +1,134 @@
+﻿@model Models.Models.BookingModels.BookingSummary
+@{
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row justify-content-center mb-3 mt-3">
+        <div class="=col text-center">
+            <h1 style="font-size: 48px">Booking Summary</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="border:5px solid; border-color: cornflowerblue; border-radius:10px">
+    <div class="row row-cols-2 justify-content-center mt-3 mb-3">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.DepartureLocation, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.DepartureLocation</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.ArrivalLocation, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.ArrivalLocation</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.DateFrom, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.DateFrom</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.DepartTime, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.DepartTime</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.ArrivalDate, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.ArrivalDate</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.ArrivalTime, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.ArrivalTime</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.NumberOfCars, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.NumberOfCars</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.NumberOfPassengers, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.NumberOfPassengers</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.PersonName, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.PersonName</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.Line1, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.Line1</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.Line2, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.Line2</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.City, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.City</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.Postcode, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>@Model.Postcode</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-5 ">
+        <div class="col-2  text-start">
+            @Html.LabelFor(m => m.TotalCost, htmlAttributes: new { @class = "form-label" })
+        </div>
+        <div class="col-2  text-end">
+            <p>£@Model.TotalCost</p>
+        </div>
+    </div>
+    <div class="row row-cols-2 justify-content-center mb-3">
+        <div class="col-2 text-center">
+            @Html.ActionLink("Back", "BookingAddress", "Booking", new { @class = "btn btn-secondary", @style="width: 100px" })
+        </div>
+        <div class="col-2 text-center">
+            @Html.ActionLink("Confirm", "BookingConfirmed", "Booking", new { @class = "btn btn-success", @style = "width: 100px" })
+        </div>
+    </div>
+</div>

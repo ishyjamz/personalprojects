@@ -1,0 +1,21 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Task 2.exe.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Task 2.exe
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Task 2.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\EntityFramework.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\EntityFramework.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.csproj.SuggestedBindingRedirects.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task_2.Form1.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task_2.Properties.Resources.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task_2.Search.resources
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.csproj.GenerateResource.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.csproj.CopyComplete
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.exe
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Task Set 2\Task Set 2\Task 2\obj\Debug\Task 2.pdb
