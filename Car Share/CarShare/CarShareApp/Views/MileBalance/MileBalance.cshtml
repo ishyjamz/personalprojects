@@ -1,0 +1,75 @@
+﻿@model PresentationModels.MileBalance.MileBalance
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*colours:
+    Beige: #DDC3A5
+    Black-Brown: #201E20
+    Tan: #E0A96D*@
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col text-center">
+            <h1 class="h1" style="font-size: 48px; color: #201E20; font-weight: bold">Mile Balance</h1>
+        </div>
+    </div>
+</div>
+<div class="container w-50 mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Breakdown</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr class="text-center">
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Miles as Driver
+                        </th>
+                        <th>
+                            Miles as Passenger
+                        </th>
+                        <th>
+                            Balance
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.MileBalanceGrid.Count != 0)
+                    {
+                        foreach (var item in Model.MileBalanceGrid)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    @item.User.Name
+                                </td>
+                                <td>
+                                    @item.MilesAsDriver
+                                </td>
+                                <td>
+                                    @item.MilesAsPassenger
+                                </td>
+                                <td>
+                                    @item.Total
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container w-25 mt-5" style="border: 5px solid; background-color: #201E20; border-color: #201E20; border-radius: 10px ">
+    <div class="row mt-3 mb-2 me-auto ms-auto">
+        <div class="col">
+            <h3 style="color: wheat; font-weight: bold; font-size: 24px">Overall Balance: @Model.OverallBalance</h3>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,89 @@
+﻿@model PresentationModels.Driver.ManageJourneys
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col text-center">
+            <h1 class="h1" style="font-size: 48px; color: #201E20; font-weight: bold">Driver: Manage Journeys</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="color: #201E20">Upcoming Journeys</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table justify-content-center">
+                <thead style="background-color: #E0A96D; color: #201E20 ">
+                    <tr class="text-center">
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Leaving Time
+                        </th>
+                        <th>
+                            To Work
+                        </th>
+                        <th>
+                            Seats Available
+                        </th>
+                        <th>
+                            No. of Passengers
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.JourneyGrid.Count != 0)
+                    {
+                        foreach (var item in Model.JourneyGrid)
+                        {
+                            <tr class="text-center">
+                                <td>
+                                    @item.Date.ToShortDateString()
+                                </td>
+                                <td>
+                                    @item.LeavingTime
+                                </td>
+                                <td>
+                                    @item.FromToWork
+                                </td>
+                                <td>
+                                    @item.SeatsAvailable
+                                </td>
+                                <td>
+                                    @item.NumberOfPassengers
+                                </td>
+                                <td>
+                                    @if (item.IsLocked == false)
+                                    {
+                                        @Html.ActionLink("Lock", "LockJourney", "Driver", new { driverJourneyId = item.DriverJourneyId }, new { @class = "btn", @style = "font-weight: bold; color: white; background-color: #FF0000" })
+
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink("Unlock", "UnlockJourney", "Driver", new { driverJourneyId = item.DriverJourneyId }, new { @class = "btn", @style = "font-weight: bold; background-color: #1DB954; color:white" })
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-3 justify-content-center">
+        <div class="col text-center">
+            @Html.ActionLink("Add a Journey", "AddJourney", "Passenger", new { @class = "btn", @style = "font-weight: bold; color: wheat; background-color:#201E20" })
+        </div>
+    </div>
+</div>
+
+

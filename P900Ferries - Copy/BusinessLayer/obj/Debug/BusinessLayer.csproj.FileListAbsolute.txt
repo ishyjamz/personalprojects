@@ -1,0 +1,26 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\DataAccess.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\DataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\Models.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\DataAccessModels.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\DataAccess.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\bin\Debug\Models.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\DataAccess.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\DataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\Models.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\DataAccessModels.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\DataAccess.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\bin\Debug\Models.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P900 Ferries\P900Ferries - Copy\BusinessLayer\obj\Debug\BusinessLayer.pdb

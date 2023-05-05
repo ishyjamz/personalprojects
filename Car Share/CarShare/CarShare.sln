@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShareApp", "CarShareApp\CarShareApp.csproj", "{0D39BF12-582D-41C5-B3E7-4947F05B0C34}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CarShareDatabase", "CarShareDatabase\CarShareDatabase.sqlproj", "{C3B9D625-F510-424E-875A-548DB99381A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationModels", "PresentationModels\PresentationModels.csproj", "{941097F1-1B19-433F-8BFB-C6C2B2610B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityDataAccessModels", "EntityDataAccessModels\EntityDataAccessModels.csproj", "{5DC559A4-018A-4576-B51E-CF9083BC4FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{4EF276BE-FD60-47DC-AB55-49658471C8AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D39BF12-582D-41C5-B3E7-4947F05B0C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D39BF12-582D-41C5-B3E7-4947F05B0C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D39BF12-582D-41C5-B3E7-4947F05B0C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D39BF12-582D-41C5-B3E7-4947F05B0C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B9D625-F510-424E-875A-548DB99381A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B9D625-F510-424E-875A-548DB99381A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B9D625-F510-424E-875A-548DB99381A6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C3B9D625-F510-424E-875A-548DB99381A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B9D625-F510-424E-875A-548DB99381A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B9D625-F510-424E-875A-548DB99381A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{941097F1-1B19-433F-8BFB-C6C2B2610B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941097F1-1B19-433F-8BFB-C6C2B2610B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941097F1-1B19-433F-8BFB-C6C2B2610B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941097F1-1B19-433F-8BFB-C6C2B2610B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC559A4-018A-4576-B51E-CF9083BC4FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC559A4-018A-4576-B51E-CF9083BC4FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC559A4-018A-4576-B51E-CF9083BC4FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC559A4-018A-4576-B51E-CF9083BC4FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF276BE-FD60-47DC-AB55-49658471C8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF276BE-FD60-47DC-AB55-49658471C8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF276BE-FD60-47DC-AB55-49658471C8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF276BE-FD60-47DC-AB55-49658471C8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {621D3FED-B1B1-434A-A195-2AB3D6537220}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.dorsetsoftware.com:8080/tfs/dorset%20software%20training
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CarShareApp\\CarShareApp.csproj
+		SccProjectName1 = CarShareApp
+		SccLocalPath1 = CarShareApp
+		SccProjectUniqueName2 = CarShareDatabase\\CarShareDatabase.sqlproj
+		SccProjectName2 = CarShareDatabase
+		SccLocalPath2 = CarShareDatabase
+		SccProjectUniqueName3 = PresentationModels\\PresentationModels.csproj
+		SccProjectName3 = PresentationModels
+		SccLocalPath3 = PresentationModels
+		SccProjectUniqueName4 = EntityDataAccessModels\\EntityDataAccessModels.csproj
+		SccProjectName4 = EntityDataAccessModels
+		SccLocalPath4 = EntityDataAccessModels
+		SccProjectUniqueName5 = BusinessLogic\\BusinessLogic.csproj
+		SccProjectName5 = BusinessLogic
+		SccLocalPath5 = BusinessLogic
+	EndGlobalSection
+EndGlobal

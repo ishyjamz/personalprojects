@@ -1,0 +1,12 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityDataAccessModels.dll.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityDataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityDataAccessModels.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityFramework.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityFramework.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\obj\Debug\EntityDataAccessModels.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\obj\Debug\EntityDataAccessModels.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\obj\Debug\EntityDataAccessModels.csproj.CopyComplete
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\obj\Debug\EntityDataAccessModels.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\Car Share\CarShare\EntityDataAccessModels\obj\Debug\EntityDataAccessModels.pdb

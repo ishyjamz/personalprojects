@@ -1,0 +1,53 @@
+﻿@model Models.Models.BookingModels.BookingConfirmed
+@{
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+@using (Html.BeginForm("SaveBooking", "Booking"))
+{
+    <div class="container">
+        <div class="row justify-content-center mb-3 mt-3">
+            <div class="=col text-center">
+                <h1 style="font-size: 48px">Booking Confirmation</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="border:5px solid; border-color: cornflowerblue; border-radius:10px">
+        <div class="row justify-content-center mt-3">
+            <div class="col text-center">
+                <h4>
+                    Congratulations! Your booking has been made
+                </h4>
+            </div>
+        </div>
+        <div class="row row-cols-2 justify-content-center">
+            <div class="col-2 text-center">
+                <p>Booking Reference: </p>
+            </div>
+            <div class="col-2 text-center">
+                @Model.BookingReference
+                    @Html.HiddenFor(m => m.DepartureLocation)
+                    @Html.HiddenFor(m => m.DepartureDate)
+                    @Html.HiddenFor(m => m.UserId)
+                    @Html.HiddenFor(m => m.ArrivalDate)
+                    @Html.HiddenFor(m => m.ArrivalLocation)
+                    @Html.HiddenFor(m => m.BookingId)
+                    @Html.HiddenFor(m => m.Cars)
+                    @Html.HiddenFor(m => m.CompanyName)
+                    @Html.HiddenFor(m => m.Cost)
+                    @Html.HiddenFor(m => m.FerryName)
+                    @Html.HiddenFor(m => m.Passengers)
+                    @Html.HiddenFor(m => m.BookingReference)
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row justify-content-center mb-3 mt-3">
+                <div class="=col text-center">
+                    <input type="submit" value="Return To Journey Picker" class="btn btn-secondary" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

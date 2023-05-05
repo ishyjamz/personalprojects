@@ -1,0 +1,12 @@
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\Entity Library.dll.config
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\Entity Library.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\Entity Library.pdb
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\EntityFramework.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\EntityFramework.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\obj\Debug\Entity Library.dll
+C:\Workspaces\Ishtiak Jamil\Main\Source\P770 Data Driven Applications\Presentation Tier\Entity Library\obj\Debug\Entity Library.pdb

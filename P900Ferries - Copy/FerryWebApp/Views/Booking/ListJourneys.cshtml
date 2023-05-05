@@ -1,0 +1,77 @@
+﻿@model Models.Models.BookingModels.ChooseJourneyModel
+@{
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+
+    <div class="container">
+        <div class="row justify-content-center mt-3 mb-5">
+            <div class="=col text-center">
+                <h1 style="font-size: 48px">Select a Journey</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row row-cols-1 justify-content-center">
+            <div class="col text-center">
+                <table class="table" id="ferryTable">
+                    <thead>
+                        <tr>
+                            <th>
+                                Ferry
+                            </th>
+                            <th>
+                                Company
+                            </th>
+                            <th>
+                                Departure Time
+                            </th>
+                            <th>
+                                Arrival Date
+                            </th>
+                            <th>
+                                Arrival Time
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                        @if (Model.JourneyGrid != null)
+                        {
+                            foreach (var item in Model.JourneyGrid)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.FerryName
+                                    </td>
+                                    <td>
+                                        @item.CompanyName
+                                    </td>
+                                    <td>
+                                        @item.DepartureTime
+                                    </td>
+                                    <td>
+                                        @item.ArrivalDate.Date
+                                    </td>
+                                    <td>
+                                        @item.ArrivalTime
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Select", "StoreJourneyInfo", "Booking", new { journeyId = item.JourneyId }, new { @class = "btn btn-primary" })
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row row-cols-1 justify-content-center mb-3">
+            <div class="col text-center">
+                @Html.ActionLink("Back", "JourneyPicker", "Booking", new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    </div>
+

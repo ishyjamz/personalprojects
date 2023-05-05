@@ -1,0 +1,72 @@
+﻿@model Models.Models.FerryModels.FerryViewModel
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<div class="container" style="margin-bottom: 100px">
+    <div class="row justify-content-center mb-5" style="margin-top: 10px">
+        <div class="col-4 text-center">
+            <h1>Edit Ferry Details</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-8">
+            @using (Html.BeginForm("SaveEditFerry", "Ferry"))
+            {
+                <div class="row row-cols-2 justify-content-center mb-5">
+                    <div class="col-3">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "form-label" })
+                    </div>
+                    <div class="col-5">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control " } })
+                    </div>
+                </div>
+                <div class="row row-cols-1 justify-content-center mb-5">
+                    <div class="col-3">
+                        @Html.LabelFor(m => m.Company.Name, htmlAttributes: new { @class = "form-label" })
+                        @Html.HiddenFor(m => m.RowVersion)
+                        @Html.HiddenFor(m => m.FerryId)
+                    </div>
+                    <div class="col-5">
+                        <div class="form-group">
+                            @Html.DropDownListFor(c => c.CompanyId, new SelectList(Model.Companies, "CompanyId", "Name", Model.CompanyId), "[Please Select]", new {  @class = "form-select " } )
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-2 justify-content-center mb-5">
+
+                    <div class="col-2">
+                        <input type="submit" value="Save" class="btn btn-success" style="width: 100px" />
+                    </div>
+
+                    <div class="col-2">
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal" style="width: 100px">Cancel</a>
+                        <div class="modal fade" id="modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2" class="text-danger">Warning</h2">
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to cancel? All changes will be lost</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="row row-cols-2 justify-content-center">
+                                            <div class="col">
+                                                <a href="@Url.Action("List", "Ferry")" class="btn btn-success">Yes</a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="btn btn-danger" data-bs-dismiss="modal">No</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

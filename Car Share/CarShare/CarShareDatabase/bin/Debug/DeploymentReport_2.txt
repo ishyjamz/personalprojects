@@ -1,0 +1,54 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[DriverJourney]
+       [dbo].[JourneyStop]
+       [dbo].[Location]
+       [dbo].[Notification]
+       [dbo].[PassengerJourney]
+       [dbo].[PassengerJourneyStatus]
+       [dbo].[User]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       [dbo].[PK_ApprovedUser] on [dbo].[ApprovedUser]
+       [dbo].[PK_DriverStop] on [dbo].[DriverStop]
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[ApprovedUser] (Foreign Key)
+       unnamed constraint on [dbo].[ApprovedUser] (Foreign Key)
+       unnamed constraint on [dbo].[DriverJourney] (Foreign Key)
+       unnamed constraint on [dbo].[DriverStop] (Foreign Key)
+       unnamed constraint on [dbo].[DriverStop] (Foreign Key)
+       unnamed constraint on [dbo].[JourneyStop] (Foreign Key)
+       unnamed constraint on [dbo].[JourneyStop] (Foreign Key)
+       unnamed constraint on [dbo].[Notification] (Foreign Key)
+       unnamed constraint on [dbo].[PassengerJourney] (Foreign Key)
+       unnamed constraint on [dbo].[PassengerJourney] (Foreign Key)
+       unnamed constraint on [dbo].[User] (Foreign Key)
+     Table rebuild
+       [dbo].[DriverJourney] (Table)
+       [dbo].[JourneyStop] (Table)
+       [dbo].[Location] (Table)
+       [dbo].[Notification] (Table)
+       [dbo].[PassengerJourney] (Table)
+       [dbo].[PassengerJourneyStatus] (Table)
+       [dbo].[User] (Table)
+     Create
+       [dbo].[PK_ApprovedUser] (Primary Key)
+       [dbo].[PK_DriverStop] (Primary Key)
+       [dbo].[FK_DriverJourney_Driver] (Foreign Key)
+       [dbo].[FK_JourneyStop_Location] (Foreign Key)
+       [dbo].[FK_DriverStop_DriverJourney] (Foreign Key)
+       [dbo].[FK_Notification_PassengerJourney] (Foreign Key)
+       [dbo].[FK_PassengerJourney_JourneyStop] (Foreign Key)
+       [dbo].[FK_PassengerJourney_PassengerJourneyStatus] (Foreign Key)
+       [dbo].[FK_User_AspNetUsers] (Foreign Key)
+       [dbo].[FK_ApprovedUser_Driver] (Foreign Key)
+       [dbo].[FK_ApprovedUser_Passenger] (Foreign Key)
+       [dbo].[FK_DriverStop_Location] (Foreign Key)
+       [dbo].[FK_DriverStop_User] (Foreign Key)
+
+** Supporting actions
