@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+        <div layout="row" layout-align="center">
+            <h1 class="header">
+                Please fill out details 
+            </h1>
+        </div>
+    </mat-card-header>
+    <form>
+        <mat-form-field class="example-form-field">
+            <mat-label>Clearable input</mat-label>
+            <input matInput type="text" [(ngModel)]="value">
+            <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+    </form>
+    <mat-card-content>
+
+    </mat-card-content>
+
+    <mat-card-footer>
+
+    </mat-card-footer>
+</mat-card>
