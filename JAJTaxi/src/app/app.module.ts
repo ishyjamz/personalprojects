@@ -13,7 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-import { BookNowComponent } from './home/book-now/book-now.component';
+import { BookNowComponent } from './book-now/book-now.component';
 
 
 @NgModule({
