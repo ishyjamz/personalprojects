@@ -18,7 +18,7 @@ const InputField: React.FC<Props> = ({todo, setTodo, handleAdd}) => {
         <input 
         ref={inputRef} 
         type="text" 
-        placeholder='You are a chicken nugget' 
+        placeholder='Enter some text' 
         className='input-box'
         value={todo} 
         onChange= {

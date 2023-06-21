@@ -54,7 +54,7 @@
 
   .todos-single{
     display: flex;
-    width: 29.5%;
+    width: 100%;
     border-radius:5px;
     padding: 20px;
     margin-top: 15px;
