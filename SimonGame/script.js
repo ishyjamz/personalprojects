@@ -86,15 +86,13 @@ function playSound(color) {
     }
 
     else {
-        setTime();
+        playJojo();
     }
 }
 
-function setTime() {
+function playJojo() {
     jojo.currentTime = 0.3;
     jojo.play();
-    console.log(jojo.currentTime);
-
 
     setInterval(function () {
         if (jojo.currentTime > 1.5) {
