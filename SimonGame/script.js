@@ -1,5 +1,6 @@
-const colourArray = ['red', 'yellow', 'blue', 'green'];
-let intervalId;
+const colourArray = ['Red', 'Yellow', 'Blue', 'Green'];
+let userArray = [];
+let gameArray = [];
 
 
 function clickButton(buttonid, color) {
@@ -14,6 +15,18 @@ function clickButton(buttonid, color) {
             button.style.width = "300px";
             button.style.height = "300px"
         }, 100);
+
+        increaseUserArray(color);
+        scoreCounter();
+        colourSequence();
+
+        console.log("userarray", userArray);
+
+        Array.from(gameArray).forEach(function (colour) {
+                highlightButton(colour);
+        });
+
+
 
     });
 }
@@ -37,32 +50,45 @@ function clickStartButton() {
             button.disabled = false;
         });
 
+        startButton.disabled = true;
+
         let array = colourSequence();
         let colour = array[0];
-
-        console.log(colour);
-
         highlightButton(colour);
     });
 }
 
 function highlightButton(buttonColour) {
-    let highlightedBtn = document.getElementById(buttonColour + "-btn");
-    setInterval(function () {
-        highlightedBtn.classList.add("highlight");
+    let btnColour = String(buttonColour).toLowerCase();
+    const highlightedBtn = document.getElementById(btnColour + "-btn");
+
+    setTimeout(function () {
+        highlightedBtn.style.backgroundColor = "white";
     }, 1000)
+
+    setTimeout(function () {
+        highlightedBtn.style.backgroundColor = buttonColour;
+    }, 1500)
 }
 
 let scoreCounter = function () {
+    if (JSON.stringify(userArray) === JSON.stringify(gameArray)) {
+        console.log("win");
+        userArray = [];
+        }
+    else {
+        console.log("lose");
+    }
+}
 
+function increaseUserArray(colour) {
+    userArray.push(colour);
 }
 
 function colourSequence() {
-    const gameArray = [];
-    console.log(colourArray);
     const randomColour = colourArray[Math.floor(Math.random() * colourArray.length)];
     gameArray.push(randomColour);
-    console.log(gameArray);
+    console.log("gamearray", gameArray);
     return gameArray;
 }
 
