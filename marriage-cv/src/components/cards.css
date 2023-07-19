@@ -1,0 +1,18 @@
+.pic {
+    width: 298px;
+    height: 285.11px;
+    object-fit: cover;
+}
+
+.card {
+    width: 300px;
+}
+.card:hover{
+    width: 330px;
+    height: 550px;
+}
+
+#click-here {
+    font-size: 15px;
+    font-weight: bold;
+}
