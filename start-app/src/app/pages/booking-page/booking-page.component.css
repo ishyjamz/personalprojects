@@ -1,0 +1,10 @@
+#container {
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#vertical-line{
+    width: 5px;
+    height: 280px;
+    color: black;
+}

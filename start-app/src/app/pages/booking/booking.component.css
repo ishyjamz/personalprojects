@@ -1,0 +1,8 @@
+#container {
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#booking-card {
+    width: 500px;
+}
