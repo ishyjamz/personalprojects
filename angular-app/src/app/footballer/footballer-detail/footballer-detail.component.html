@@ -1,0 +1,23 @@
+<tr [class.goat-bool]="detail.isGoat">
+    <td>
+        {{detail.id}}
+    </td>
+    <td>
+        {{detail.name}}
+    </td>
+    <td>
+        {{detail.goals}}
+    </td>
+    <td>
+        {{detail.assists}}
+    </td>
+    <td>
+        {{detail.team}}
+    </td>
+    <td>
+        {{detail.isGoat}}
+    </td>
+    <td>
+        <button type="button" (click)='onRemove()'>Remove</button>
+    </td>
+</tr>

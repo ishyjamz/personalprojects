@@ -1,1 +1,31 @@
-<p>footballer-list works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Goals
+            </th>
+            <th>
+                Assists
+            </th>
+            <th>
+                Team
+            </th>
+            <th>
+                Goat?
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <app-footballer-detail 
+        *ngFor="let footballer of footballers" 
+        [detail]="footballer"
+        (remove)="handleRemove($event)">
+        </app-footballer-detail>
+    </tbody>
+</table>
