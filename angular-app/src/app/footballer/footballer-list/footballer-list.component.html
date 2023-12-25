@@ -1,6 +1,8 @@
-<ul *ngFor="let footballer of footballers">
-    <app-footballer-detail 
-[detail]="footballer"
-(remove)="handleRemove($event)">
-</app-footballer-detail>
+<ul *ngFor="let footballer of footballers" #footballerUl>
+    <app-footballer-detail #footballerRef [detail]="footballer" (remove)="handleRemove($event)">
+        <h1>meow----meow----meow----meow</h1>
+    </app-footballer-detail>
 </ul>
+<h2 *customif="true">I hate Liverpool</h2>
+<h2 *customif="false">I hate Man City</h2>
+<div highlighttext>hello meow boobil</div>

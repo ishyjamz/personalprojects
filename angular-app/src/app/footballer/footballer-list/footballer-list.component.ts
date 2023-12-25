@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Footballer } from '../../models/footballer';
 import { FootballerDetailComponent } from '../footballer-detail/footballer-detail.component';
-import { FootballerService } from '../../services/footballer.service';
+import { FootballerService } from '../../_services/footballer.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { HighlighttextDirective } from '../../_directives/highlighttext.directive';
 
 @Component({
   selector: 'app-footballer-list',
@@ -14,11 +15,23 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
   styleUrl: './footballer-list.component.css'
 })
 
-export class FootballerListComponent implements OnInit {
+export class FootballerListComponent implements OnInit, AfterViewInit {
+
   footballers!: Footballer[];
+  @ViewChildren('footballerRef') footballerRef!: ElementRef;
+  @ViewChild('footballerUl') footballerUl!: ElementRef;
 
-  constructor(private footballerService: FootballerService) {
+  constructor(private footballerService: FootballerService, private renderer: Renderer2) {
 
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.footballerRef);
+    console.log(this.footballerUl)
+    const div = this.renderer.createElement('div');
+    const text = this.renderer.createText('Meow fakhi');
+    this.renderer.appendChild(div, text);
+    this.renderer.appendChild(this.footballerUl.nativeElement, div);
   }
 
   ngOnInit(): void{

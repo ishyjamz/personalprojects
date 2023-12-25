@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FootballerService } from '../../services/footballer.service';
+import { FootballerService } from '../../_services/footballer.service';
 import { Footballer } from '../../models/footballer';
 import { FootballerType } from '../../models/footballer-type';
 import { ActivatedRoute, Params, Router } from '@angular/router';
