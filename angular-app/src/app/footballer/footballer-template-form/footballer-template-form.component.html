@@ -1,0 +1,32 @@
+<form #form="ngForm" (ngSubmit)="handleSubmit(form)">
+  Footballer Name:
+  <input type="text" [(ngModel)]="footballer.name" name="name" />
+  <label>Is this Footballer a GOAT?</label>
+  <label>
+    Yes
+    <input type="radio" name="isGoat" [value]="true" [ngModel]="footballer.isGoat" />
+  </label>
+  <label>
+    No
+    <input type="radio" name="isGoat" [value]="false" [(ngModel)]="footballer.isGoat"
+      (ngModelChange)="toggleIsGoat($event)" #footballerName="ngModel" />
+  </label>
+  <label>
+    Check this box to sign your rights away to the illuminati
+    <input type="checkbox" name="acceptTerms" [value]="false" [(ngModel)]="footballer.acceptTerms" />
+  </label>
+  <label>
+    Footballer Type:
+    <select name="footballerType" [ngModel]="footballer.type">
+      <option *ngFor="let type of footballerType" [value]="type.value" [selected]="type.value === footballer.type">
+        {{type.value}}</option>
+    </select>
+  </label>
+  <button type="submit" [disabled]="!form.valid">Save</button>
+  <button type="button" (click)="back()">Back</button>
+</form>
+<div>
+  MODEL: {{footballer | json }} <br>
+  FORM: {{form.value | json }} <br>
+  ERROR: <div *ngIf="!footballerName.pristine">NOT PRISTINE ANYMORE IT IS ANGRY</div>
+</div>

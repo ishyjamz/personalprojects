@@ -5,4 +5,6 @@ export interface Footballer {
     assists: number;
     team: string;
     isGoat: boolean;
+    acceptTerms: boolean;
+    type: string;
   }

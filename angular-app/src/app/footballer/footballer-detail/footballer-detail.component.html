@@ -1,23 +1,22 @@
-<tr [class.goat-bool]="detail.isGoat">
-    <td>
-        {{detail.id}}
-    </td>
-    <td>
-        {{detail.name}}
-    </td>
-    <td>
-        {{detail.goals}}
-    </td>
-    <td>
-        {{detail.assists}}
-    </td>
-    <td>
-        {{detail.team}}
-    </td>
-    <td>
-        {{detail.isGoat}}
-    </td>
-    <td>
-        <button type="button" (click)='onRemove()'>Remove</button>
-    </td>
-</tr>
+<li>
+    {{detail.id}}
+</li>
+<li>
+    {{detail.name}}
+</li>
+<li>
+    {{detail.goals}}
+</li>
+<li>
+    {{detail.assists}}
+</li>
+<li>
+    {{detail.team}}
+</li>
+<li>
+    {{detail.isGoat}}
+</li>
+<button (click)="onRemove()">Remove</button>
+<button (click)="navigateToFootballerDetails(detail.id)">Details</button>
+
+
