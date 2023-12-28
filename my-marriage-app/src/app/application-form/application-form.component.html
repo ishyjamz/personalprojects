@@ -1,0 +1,33 @@
+<h1 class="title">Application Form</h1>
+
+<form (ngSubmit)="handleSubmit()">
+  <div>
+    <label>First Name: </label>
+    <input type="text" (ngModel)="user.firstName" name="firstName" /> --
+    <label>Last Name: </label>
+    <input type="text" (ngModel)="user.lastName" name="firstName" />
+  </div> <br>
+  <div>
+    <label>Height (ft/inch): </label>
+    <input type="text" (ngModel)="user.height" name="firstName" /> --
+    <label>Town/City: </label>
+    <input type="text" (ngModel)="user.city" name="firstName" />
+  </div> <br>
+  <div>
+    <label>Education Level: </label>
+    <input type="text" (ngModel)="user.educationLevel" name="firstName" /> --
+    <label>Occupation:  </label>
+    <input type="text" (ngModel)="user.occupation" name="firstName" />
+  </div> <br>
+  <div>
+    <label>Bangladesh Address (Gram/Bazar): </label>
+    <input type="text" (ngModel)="user.bangladeshAddress" name="firstName" />
+  </div> <br>
+  <div>
+    <label>Personal Statement (250 words max): </label>
+    <input type="text" (ngModel)="user.description" name="firstName" />
+  </div><br>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
