@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <script>
+      async function loadTasks() {
+        res = await fetch("get-tasks", {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        });
+
+        jsonResponse = await res.json();
+
+        ulEl = document.getElementById("tasks");
+
+        for (task of jsonResponse.tasks) {
+          liEl = document.createElement("li");
+          liEl.textContent = task;
+          ulEl.appendChild(liEl);
+        }
+      }
+
+      async function handleSaveTask() {
+        ulEl = document.getElementById("tasks");
+        inputEl = document.getElementById("task");
+
+        liEl = document.createElement("li");
+        liEl.textContent = inputEl.value;
+        ulEl.appendChild(liEl);
+
+        payload = {
+          task: inputEl.value,
+        };
+
+        response = await fetch("save-task", {
+          method: "POST",
+          body: JSON.stringify(payload),
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        });
+
+        jsonResponse = await response.json();
+        console.log(jsonResponse);
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body onload="loadTasks()">
+    <div>
+      <label>Add Task</label>
+      <input id="task" type="text" placeholder="new task" />
+      <button onclick="handleSaveTask()">Save</button>
+
+      <ul id="tasks"></ul>
+    </div>
+  </body>
+</html>

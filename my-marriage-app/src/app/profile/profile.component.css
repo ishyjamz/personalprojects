@@ -1,0 +1,40 @@
+.top-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+}
+
+.nice {
+  color: pink;
+  font-size: 50px;
+  margin-top: 27px;
+}
+
+.nice:hover {
+  color: violet;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.title {
+  color: pink;
+  font-size: 50px;
+}
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.edit-icon {
+  position: absolute;
+  padding-top: 25px;
+  color: palevioletred;
+  font-size: 50px;
+}

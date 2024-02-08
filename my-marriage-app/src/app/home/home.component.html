@@ -1,5 +1,13 @@
-<h1 class="title">Home</h1>
+<body>
+  <div class="welcome-container">
+    <h1 class="title">Welcome to TaqwaTies</h1>
+    <h3 class="subtitle">Completing half your deen - now made simpler</h3>
+  </div>
+  
+  <div class="container">
+    <ul *ngFor="let link of links">
+      <app-card [link]="link"></app-card>
+    </ul>
+  </div>  
+</body>
 
-<ul *ngFor="let link of links">
-  <app-card [link]="link"></app-card>
-</ul>

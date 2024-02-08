@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarriageAppBackend", "MarriageAppBackend\MarriageAppBackend.csproj", "{A705EF63-1486-48F6-9379-96F0F1B5120A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A705EF63-1486-48F6-9379-96F0F1B5120A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A705EF63-1486-48F6-9379-96F0F1B5120A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A705EF63-1486-48F6-9379-96F0F1B5120A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A705EF63-1486-48F6-9379-96F0F1B5120A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

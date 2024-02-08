@@ -1,3 +1,16 @@
-<h1 class="title">
-  My Profile
-</h1>
+<div class="top-container">
+  <div>
+    <h1 class="title">My Profile</h1>
+  </div>
+  <div>
+    <button (click)="switchToEditMode()" class="btn">
+      <i class="nice fa-solid fa-pen-to-square"></i>
+    </button>
+  </div>
+</div>
+
+<div class="body-container">
+  <ul *ngFor="let profileQuestion of profileQuestions">
+    <app-profile-card [profileQuestion]="profileQuestion"></app-profile-card>
+  </ul>
+</div>
