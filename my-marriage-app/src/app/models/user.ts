@@ -8,4 +8,5 @@ export interface User {
     educationLevel: string;
     bangladeshAddress: string;
     description: string;
+    matches: User[]
 }

@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="title-container">
+    <h1>Application Form</h1>
+  </div>
+  <div class="form-style-5">
+    <form [formGroup]="applicationForm">
+      <legend><span class="number">1</span> Personal Details</legend>
+      <div class="field-container">
+        <div class="field">
+          <label>Forename(s) *</label>
+          <input
+            type="text"
+            placeholder="Forename(s)"
+            formControlName="forename"
+          />
+        </div>
+        <div class="field">
+          <label>Surname *</label>
+          <input type="text" placeholder="Surname" formControlName="surname" />
+        </div>
+      </div>
+      <label>Town/City *</label>
+      <input type="text" placeholder="Town/City" formControlName="city" />
+      <label>Height *</label>
+      <input type="text" placeholder="Height" formControlName="height" />
+      <label>Occupation *</label>
+      <input
+        type="text"
+        placeholder="Occupation"
+        formControlName="occupation"
+      />
+      <label for="job">Education Level:</label>
+      <select id="job" formControlName="educationLevel"></select>
+      <legend><span class="number">2</span> Wali's Contact Details</legend>
+      <label>Name *</label>
+      <input type="text" placeholder="Name" formControlName="waliName" />
+      <label>Relationship to applicant</label>
+      <input
+        type="text"
+        placeholder="Relationship to applicant"
+        formControlName="waliRelationship"
+      />
+      <label>Contact number *</label>
+      <input
+        type="text"
+        placeholder="Contact number *"
+        formControlName="waliNumber"
+      />
+      <legend><span class="number">3</span> Additional Information</legend>
+      <label>Personal Statement (Max 250 words)</label>
+      <textarea
+        rows="20"
+        cols="5"
+        placeholder="A brief description of who you are as a person - e.g your level of religiosity, likes, dislikes, personality etc."
+      ></textarea>
+      <input type="submit" value="Apply" />
+    </form>
+  </div>
+</div>

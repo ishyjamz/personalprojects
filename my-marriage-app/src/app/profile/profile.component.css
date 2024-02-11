@@ -6,29 +6,16 @@
   gap: 2%;
 }
 
-.nice {
-  color: pink;
-  font-size: 50px;
-  margin-top: 27px;
-}
-
-.nice:hover {
-  color: violet;
-}
-
-.btn {
-  background-color: transparent;
-  border: none;
-}
-
 .title {
   color: pink;
   font-size: 50px;
 }
 .body-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-top: 10px;
 }
 
