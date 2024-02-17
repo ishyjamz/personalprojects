@@ -9,9 +9,20 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProfileComponent implements OnInit {
 
+  public isEditMode: boolean = false;
   constructor() {}
 
   ngOnInit() {}
+
+  public addCard(){
+    let newProfileQuestion: ProfileQuestion = {
+      id: this.profileQuestions.length + 1,
+      question: "",
+      answer: ""
+    }
+    this.profileQuestions.push(newProfileQuestion);
+    this.isEditMode = true;
+  }
 
   profileQuestions: ProfileQuestion[] = [
     {

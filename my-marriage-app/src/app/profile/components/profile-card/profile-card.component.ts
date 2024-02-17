@@ -10,22 +10,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ProfileCardComponent implements OnInit {
   @Input() profileQuestion!: ProfileQuestion;
   public isEditMode: boolean = false;
-  profileQuestionForm!: FormGroup;
+  @Input() isCardEditMode: boolean = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit() {
-    this.profileQuestionForm = this.fb.group({
-      answer: [this.profileQuestion.answer, Validators.required],
-    });
+    this.isEditMode = this.isCardEditMode;
   }
 
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
   }
 
-  onSave(profileData: any) {
-    console.log(profileData);
+  getProfileQuestion(profileQuestion: ProfileQuestion) {
+    this.profileQuestion = profileQuestion;
     this.toggleEditMode();
   }
 
@@ -33,6 +31,5 @@ export class ProfileCardComponent implements OnInit {
     this.isEditMode = false;
   }
 
-  deleteCard(){
-  }
+  deleteCard() {}
 }

@@ -23,7 +23,7 @@
       <h2>{{ profileQuestion.question }}</h2>
       <app-profile-form
         [profileQuestion]="profileQuestion"
-        [form]="profileQuestionForm"
+        (save)="getProfileQuestion($event)"
       ></app-profile-form>
       <div>
         <button *ngIf="isEditMode" (click)="deleteCard()" class="btn">
@@ -35,13 +35,6 @@
   <div class="button-container">
     <button *ngIf="!isEditMode" (click)="toggleEditMode()" class="btn">
       Edit <i class="fa-solid fa-pen-to-square"></i>
-    </button>
-    <button
-      *ngIf="isEditMode"
-      (click)="onSave(profileQuestion)"
-      class="btn confirm"
-    >
-      Save <i class="fa-solid fa-check"></i>
     </button>
     <button *ngIf="isEditMode" (click)="onCancel()" class="btn cancel">
       Cancel <i class="fa-solid fa-xmark"></i>

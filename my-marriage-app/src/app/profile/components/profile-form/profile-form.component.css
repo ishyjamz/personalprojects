@@ -1,8 +1,18 @@
 .input {
   width: 300px;
   height: 200px;
-  background-color: transparent;
+  background-color: pink;
   color: white;
   font-weight: bold;
-  border: none;
+  border: solid;
+  border-color: white;
+}
+
+.textbox {
+  width: 75%;
+  color: white;
+  font-weight: bold;
+  background-color: pink;
+  border: white;
+  border: solid;
 }

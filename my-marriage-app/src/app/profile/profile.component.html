@@ -5,8 +5,7 @@
 </div>
 <div class="body-container">
   <ul *ngFor="let profileQuestion of profileQuestions">
-    <app-profile-card
-      [profileQuestion]="profileQuestion"
-    ></app-profile-card>
+    <app-profile-card [isCardEditMode]="isEditMode" [profileQuestion]="profileQuestion"></app-profile-card>
   </ul>
+  <button class="plus-button" (click)="addCard()"></button>
 </div>

@@ -1,7 +1,13 @@
 <div>
-  <form class="form" [formGroup]="form">
+  <form (ngSubmit)="onSave()" class="form" [formGroup]="profileQuestionForm">
+    <div class="title">
+      <input type="text" class="textbox" formControlName="question" />
+    </div>
     <div class="field">
       <textarea type="text" class="input" formControlName="answer"></textarea>
     </div>
+    <button type="submit" class="btn confirm">
+      Save <i class="fa-solid fa-check"></i>
+    </button>
   </form>
 </div>

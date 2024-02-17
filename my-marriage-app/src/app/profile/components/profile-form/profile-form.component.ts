@@ -15,11 +15,23 @@ import {
 export class ProfileFormComponent implements OnInit {
   @Input() profileQuestion!: ProfileQuestion;
   @Input() form!: FormGroup;
-  // @Output() save = new EventEmitter<any>();
-  // @Output() cancel = new EventEmitter<void>();
-  constructor() {}
+  @Output() save = new EventEmitter<ProfileQuestion>();
+  @Output() cancel = new EventEmitter<void>();
+  profileQuestionForm!: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
+    this.profileQuestionForm = this.fb.group({
+      id: [this.profileQuestion.id],
+      question: [this.profileQuestion.question, Validators.required],
+      answer: [this.profileQuestion.answer, Validators.required],
+    });
+  }
 
+  onSave() {
+    this.profileQuestion = this.profileQuestionForm.value;
+    this.save.emit(this.profileQuestion);
+    console.log(this.profileQuestion);
   }
 }
